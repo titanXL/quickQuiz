@@ -21,7 +21,7 @@ export default class Results extends React.Component {
                 <h4>You got {this.props.score} out of {this.props.questions.length} correct</h4>
                 <h1>{percent}% - {message}</h1>
                 <hr />
-                <a href="/app">Take again</a>
+                <a href="/quickQuiz">Take again</a>
             </div>)
     }
 }
