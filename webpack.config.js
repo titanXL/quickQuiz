@@ -90,5 +90,16 @@ if (TARGET === 'start' || !TARGET) {
 }
 
 if (TARGET === 'build') {
-  module.exports = merge(common, {});
+  module.exports = merge(common, {
+    devtool: 'source-map',
+        output: {
+          path: PATHS.build,
+
+          // Tweak this to match your GitHub project name
+          publicPath: 'https://github.com/titanXL/quickQuiz',
+
+          filename: '[name].[chunkhash].js',
+          chunkFilename: '[chunkhash].js'
+        }
+  });
 }
